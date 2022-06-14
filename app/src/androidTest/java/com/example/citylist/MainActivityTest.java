@@ -87,8 +87,8 @@ public class MainActivityTest {
         onView(withId(R.id.showActivity)).check(matches(isDisplayed()));
         onView(withId(R.id.text_back)).check(matches(withText("Edmonton")));
         onView(withId(R.id.button_back)).perform(click());
-         onView(withId(R.id.MainActivity)).check(matches(isDisplayed()));
-         Espresso.pressBack();
+        onView(withId(R.id.MainActivity)).check(matches(isDisplayed()));
+        Espresso.pressBack();
 
     }
 

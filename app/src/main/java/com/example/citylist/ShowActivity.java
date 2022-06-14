@@ -17,12 +17,13 @@ public class ShowActivity extends AppCompatActivity {
         TextView textView=(TextView) findViewById(R.id.text_back);
         Button button=findViewById(R.id.button_back);
 
-        Bundle bundle = getIntent().getExtras();
-        if(!bundle.isEmpty())
+        String s = getIntent().getStringExtra("cityname");
+
+        if(!s.isEmpty())
         {
-            String s = bundle.getString("cityname");
             textView.setText(s);
         }
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
